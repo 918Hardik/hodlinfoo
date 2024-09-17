@@ -1,0 +1,109 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Luckiest+Guy&display=swap');
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  font-weight: 800;
+  color: #e0e0e0;
+}
+
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
+  font-size: 2.7em;
+  color: #e0e0e0;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: ease-in-out 0.2s;
+}
+h1:hover{
+  font-size: 3rem;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  max-width: 800px;
+  border-collapse: collapse;
+  margin: 20px auto;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+th {
+  font-family: 'Luckiest Guy';
+  font-weight: 100;
+  background-color: yellow;
+  color: black;
+  font-size: larger;
+}
+
+tr:nth-child(even) {
+  background-color: #2c2c2c;
+}
+
+tr:nth-child(odd) {
+  background-color: #1e1e1e;
+}
+
+tr:hover {
+  background-color: #444;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  tr {
+    margin: 0 0 1rem 0;
+    border: 1px solid #333;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid #333;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+
+  td:before {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: #bbb;
+  }
+
+  td:nth-of-type(1):before { content: "Platform"; }
+  td:nth-of-type(2):before { content: "Last Traded Price"; }
+  td:nth-of-type(3):before { content: "Buy / Sell Price"; }
+  td:nth-of-type(4):before { content: "Volume"; }
+  td:nth-of-type(5):before { content: "Base Unit"; }
+}
